@@ -1,0 +1,32 @@
+{
+  "name": "bth012-2023-mapgame",
+  "version": "0.1.0",
+  "description": "its a game done as part of the javascript course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pobengtsson/bth012-2023-mapgame.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Per-Olof Bengtsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pobengtsson/bth012-2023-mapgame/issues"
+  },
+  "homepage": "https://github.com/pobengtsson/bth012-2023-mapgame#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^29.7.0",
+    "eslint": "^8.51.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jest": "^27.4.2",
+    "eslint-plugin-n": "^16.2.0",
+    "eslint-plugin-promise": "^6.1.1"
+  }
+}
