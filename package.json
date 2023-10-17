@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "its a game done as part of the javascript course",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "game": "cross-env NODE_OPTIONS=--experimental-vm-modules node game.js",
     "watch": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --watch",
