@@ -4,7 +4,9 @@
   "description": "its a game done as part of the javascript course",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "game": "cross-env NODE_OPTIONS=--experimental-vm-modules node game.js",
+    "watch": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --watch",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest"
   },
   "repository": {
     "type": "git",
