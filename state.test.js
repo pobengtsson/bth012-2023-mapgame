@@ -1,7 +1,7 @@
 import { State } from './state.mjs'
 
 describe('state', () => {
-  describe('when created with game and readling interface', () => {
+  describe('when created with game and readline interface', () => {
     let expectedGame
     let expectedReadline
     let actual

@@ -39,9 +39,17 @@ describe('game', () => {
         expect(mockExecute).toHaveBeenCalled()
       })
       describe('when change state', () => {
+        let newState
+        beforeEach(() => {
+          newState = new GameOn(actual)
+          newState.execute = jest.fn()
+          actual.setState(newState)
+        })
         it('sets state to the new state', () => {
-          actual.setState(new GameOn(actual))
           expect(actual.state).toBeInstanceOf(GameOn)
+        })
+        it('calls execute on the new state', () => {
+          expect(newState.execute).toHaveBeenCalled()
         })
       })
     })

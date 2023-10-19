@@ -6,7 +6,8 @@ describe('symboliser', () => {
     { tile: new Tile('desert'), expected: '_' },
     { tile: new Tile('forest'), expected: '@' },
     { tile: new Tile('mountain'), expected: 'M' },
-    { tile: new Tile('swamp'), expected: '~' }]
+    { tile: new Tile('swamp'), expected: '~' }
+  ]
   for (const ex of examples) {
     describe(`when called with unvisited tile with ${ex.tile.terrain}`, () => {
       it('returns the masking symbol', () => {

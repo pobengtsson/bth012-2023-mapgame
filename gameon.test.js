@@ -1,5 +1,6 @@
 import { jest } from '@jest/globals'
 import { GameOn } from './gameon'
+import { GameWon } from './gamewon'
 
 describe('GameOn', () => {
   describe('when created', () => {
@@ -13,6 +14,8 @@ describe('GameOn', () => {
       mockQuestion = jest.fn()
       mockReadline = { question: mockQuestion }
       mockGame = {
+        map: { playerPosition: { x: 0, y: 0 } },
+        gemPosition: { x: 1, y: 1 },
         setState: jest.fn(),
         printLine: () => {},
         symboliser: () => {},
@@ -29,6 +32,27 @@ describe('GameOn', () => {
       })
       it('prints the map', () => {
         expect(mockRenderer).toHaveBeenCalled()
+      })
+      describe('when player is on position  with gem', () => {
+        beforeEach(() => {
+          mockGame.map.playerPosition = { x: 2, y: 2 }
+          mockGame.gemPosition = { x: 2, y: 2 }
+          gameon.execute()
+        })
+        it('change state to GameWon', () => {
+          expect(mockGame.setState).toHaveBeenCalled()
+        })
+      })
+      describe('when player is not on gem position', () => {
+        beforeEach(() => {
+          mockGame.map.playerPosition = { x: 2, y: 2 }
+          mockGame.gemPosition = { x: 1, y: 2 }
+          mockGame.setState.mock.calls = []
+          gameon.execute()
+        })
+        it('change state to GameWon', () => {
+          expect(mockGame.setState).not.toHaveBeenCalled()
+        })
       })
     })
   })
