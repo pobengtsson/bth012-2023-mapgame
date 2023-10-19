@@ -5,4 +5,8 @@ export class Player {
     this.armour = 100
     this.damage = 20
   }
+
+  isHealthy () {
+    return this.health > 0
+  }
 }

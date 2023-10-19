@@ -30,5 +30,12 @@ describe('GameMap', () => {
       const allTiles = gamemap.tiles.flatMap((x) => x)
       expect(allTiles.every((tile) => tile instanceof Tile)).toEqual(true)
     })
+    describe('when visited', () => {
+      it('sets tile isVisited to true', () => {
+        gamemap.playerPos = { x: 5, y: 3 }
+        gamemap.visit()
+        expect(gamemap.tiles[5][3].isVisited).toEqual(true)
+      })
+    })
   })
 })

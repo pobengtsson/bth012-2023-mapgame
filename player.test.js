@@ -1,4 +1,3 @@
-//import { jest } from '@global/jest'
 import { Player } from './player.mjs'
 
 describe('Player', () => {
@@ -17,6 +16,9 @@ describe('Player', () => {
     })
     it('has damage level 20', () => {
       expect(new Player('ignored').damage).toEqual(20)
+    })
+    it('is healthy', () => {
+      expect(new Player('ignored').isHealthy()).toEqual(true)
     })
   })
 })
