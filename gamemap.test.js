@@ -1,5 +1,5 @@
-import { GameMap } from './gamemap'
-import { Tile } from './tile'
+import { GameMap } from './gamemap.mjs'
+import { Tile } from './tile.mjs'
 import { jest } from '@jest/globals'
 
 describe('GameMap', () => {
@@ -11,10 +11,10 @@ describe('GameMap', () => {
   })
   describe('when created', () => {
     it('has given width', () => {
-      expect(gamemap.width).toEqual(10)
+      expect(gamemap.dimensions.width).toEqual(10)
     })
     it('has given height', () => {
-      expect(gamemap.height).toEqual(10)
+      expect(gamemap.dimensions.height).toEqual(10)
     })
     it('has list of tiles with width length', () => {
       expect(gamemap.tiles).toHaveLength(10)

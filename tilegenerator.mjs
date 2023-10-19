@@ -1,4 +1,4 @@
-import { Tile } from './tile'
+import { Tile } from './tile.mjs'
 
 function randomChoice (arr, prng) {
   return arr[Math.floor(prng() * arr.length)]

@@ -1,5 +1,5 @@
 //import { jest } from '@global/jest'
-import { Player } from './player'
+import { Player } from './player.mjs'
 
 describe('Player', () => {
   describe('when created', () => {

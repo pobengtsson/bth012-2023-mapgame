@@ -1,7 +1,7 @@
 export class Tile {
-  constructor (aTerrain) {
+  constructor (aTerrain, isVisited = false) {
     this.terrain = aTerrain
-    this.isVisited = false
+    this.isVisited = isVisited
     this.items = []
     this.npcList = []
     this.actions = []

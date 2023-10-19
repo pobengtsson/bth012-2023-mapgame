@@ -1,5 +1,5 @@
 import { jest } from '@jest/globals'
-import { tileGenerator } from './tilegenerator'
+import { tileGenerator } from './tilegenerator.mjs'
 
 describe('tilegenerator function', () => {
   describe('when called', () => {

@@ -1,4 +1,4 @@
-import { Tile } from './tile'
+import { Tile } from './tile.mjs'
 
 describe('tile', () => {
   describe('when created', () => {
