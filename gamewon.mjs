@@ -1,3 +1,7 @@
-import { State } from './state'
+import { State } from './state.mjs'
 
-export class GameWon extends State {}
+export class GameWon extends State {
+  execute () {
+    console.log('Win')
+  }
+}

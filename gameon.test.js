@@ -14,8 +14,8 @@ describe('GameOn', () => {
       mockQuestion = jest.fn()
       mockReadline = { question: mockQuestion }
       mockGame = {
-        map: { playerPosition: { x: 0, y: 0 } },
-        gemPosition: { x: 1, y: 1 },
+        map: { playerPos: { x: 0, y: 0 } },
+        gemPos: { x: 1, y: 1 },
         setState: jest.fn(),
         printLine: () => {},
         symboliser: () => {},
@@ -35,8 +35,8 @@ describe('GameOn', () => {
       })
       describe('when player is on position  with gem', () => {
         beforeEach(() => {
-          mockGame.map.playerPosition = { x: 2, y: 2 }
-          mockGame.gemPosition = { x: 2, y: 2 }
+          mockGame.map.playerPos = { x: 2, y: 2 }
+          mockGame.gemPos = { x: 2, y: 2 }
           gameon.execute()
         })
         it('change state to GameWon', () => {
@@ -45,12 +45,12 @@ describe('GameOn', () => {
       })
       describe('when player is not on gem position', () => {
         beforeEach(() => {
-          mockGame.map.playerPosition = { x: 2, y: 2 }
-          mockGame.gemPosition = { x: 1, y: 2 }
+          mockGame.map.playerPos = { x: 2, y: 2 }
+          mockGame.gemPos = { x: 1, y: 2 }
           mockGame.setState.mock.calls = []
           gameon.execute()
         })
-        it('change state to GameWon', () => {
+        it('not to change state', () => {
           expect(mockGame.setState).not.toHaveBeenCalled()
         })
       })

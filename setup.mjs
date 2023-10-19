@@ -16,7 +16,7 @@ export class Setup extends State {
     const nick = await this.readline.question('Enter your name to start: ')
     this.game.player = new Player(nick)
     this.game.printLine(`Welcome ${this.game.player.name}!`)
-    this.game.gemPosition = randomPosition(this.game.map.dimensions, this.game.prng)
+    this.game.gemPos = randomPosition(this.game.map.dimensions, this.game.prng)
     this.game.map.playerPos = {
       x: Math.floor(this.game.map.dimensions.width / 2),
       y: Math.floor(this.game.map.dimensions.height / 2)

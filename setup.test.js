@@ -43,7 +43,7 @@ describe('Setup', () => {
         expect(setup.game.map.dimensions).toEqual({ width: 15, height: 15 })
       })
       it('sets the location of the gem', () => {
-        expect(setup.game.gemPosition).toEqual({ x: 5, y: 5 })
+        expect(setup.game.gemPos).toEqual({ x: 5, y: 5 })
       })
       it('puts the player in position', () => {
         expect(setup.game.map.playerPos).toEqual({ x: 7, y: 7 })
